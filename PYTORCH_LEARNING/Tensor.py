@@ -52,3 +52,29 @@ print(torch.add(x, y))
 result = torch.empty(5, 3)
 torch.add(x, y, out= result)
 print(result)
+
+# 原位操作
+y.add_(x)
+print(y)
+
+# 改变形状
+x = torch.randn(4, 4)
+y = x.view(16)
+z = x.view(-1, 8)
+print(x.size(), y.size(), z.size())
+
+# .item() 获取对应的python数值
+x = torch.randn(1)
+print(x)
+print(x.item())
+
+
+
+
+
+
+
+
+
+
+
